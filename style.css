@@ -1,0 +1,346 @@
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  background-color: #f3d4d6;
+}
+.site-header {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  background-color: rgba(255,255,255,0.8);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.hamburger {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 4px;
+  background: #6e4a4a;
+  border-radius: 2px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100vh;
+  background: #fff;
+  z-index: 99;
+  padding: 60px 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu.active {
+  transform: translateX(0);
+}
+.close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #6e4a4a;
+  cursor: pointer;
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  margin-bottom: 20px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #6e4a4a;
+  font-size: 18px;
+}
+.main-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0;
+}
+.hero-content {
+  background-color: #fdf6f7;
+  padding: 30px 20px;
+  text-align: center;
+  color: #7c5a5a;
+  font-family: "Shippori Mincho", serif;
+}
+.hero-content .subtitle {
+  font-size: 25px;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+.hero-content h1 {
+  font-size: 70px;
+  margin: -20px 0 8px;
+}
+.catchcopy {
+  font-size: 15px;
+  margin-top: 25px;
+}
+.reserve-btn {
+  display: inline-block;
+  margin: 60px auto 40px;
+  background-color: #d8a5aa;
+  color: #fff;
+  padding: 20px 80px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  transition: transform 0.2s ease, background 0.3s;
+}
+.reserve-btn:hover {
+  transform: scale(1.05);
+  background-color: #c76979;
+}
+.info-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background-color: #f3d4d6;
+  padding: 20px;
+  margin: auto;
+  max-width: 800px;
+  font-family: 'Shippori Mincho', serif;
+}
+@media (max-width: 768px) {
+  .info-section {
+    flex-direction: column;
+  }
+}
+.info-card {
+  flex: 1 1 200px;
+  width: 250px;
+  box-sizing: border-box;
+  padding: 0;
+  text-align: center;
+}
+.info-card svg {
+  margin-bottom: 5px;
+  fill: #fff;
+}
+.info-card h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+.info-card p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+.concept-block {
+  background-color: #fdf6f7;
+  padding: 100px 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  max-width: 1000px;
+  margin: 0 auto 120px;
+  padding: 0 100px;
+  flex-wrap: wrap;
+}
+
+.row img {
+  max-width: 360px;
+  width: 100%;
+  height: auto;
+}
+
+.row p {
+  font-size: 20px;
+  line-height: 2.2;
+  color: #6e4a4a;
+  max-width: 500px;
+  font-family: 'Shippori Mincho', serif;
+  text-align: left;
+  margin: 0;
+}
+
+.img-box {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .row p {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+.bg-white {
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.blog-section,
+.instagram-section {
+  background-color: #fdf6f7;
+  text-align: center;
+  font-family: 'Shippori Mincho', serif;
+}
+.blog-section {
+  padding: 20px;
+}
+.section-title {
+  font-size: 36px;
+  color: #a76464;
+  margin-bottom: 60px;
+  position: relative;
+  display: inline-block;
+}
+.blog-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 60px;
+  max-width: 700px;
+  text-align: left;
+}
+.blog-list li {
+  border-top: 1px dashed #a76464;
+  padding: 20px 0;
+}
+.blog-list li:last-child {
+  border-bottom: 1px dashed #a76464;
+}
+.blog-list h3 {
+  font-size: 18px;
+  margin: 0 0 5px;
+  color: #6e4a4a;
+}
+.blog-list .date {
+  font-size: 14px;
+  color: #a76464;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  color: #a76464;
+  flex-wrap: wrap;
+}
+.pagination span,
+.pagination a {
+  border: 1px solid #a76464;
+  padding: 5px 10px;
+  border-radius: 2px;
+  text-decoration: none;
+  color: #a76464;
+  background-color: #fff;
+}
+.pagination a:hover {
+  background-color: #f0dada;
+}
+.pagination span.dots {
+  border: none;
+  background: none;
+}
+.next-wrap {
+  text-align: center;
+  margin-top: 20px;
+}
+.next {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #a76564;
+  border-radius: 2px;
+  text-decoration: none;
+  color: #a76464;
+  background-color: #fff;
+}
+.next:hover {
+  background-color: #f0dada;
+}
+.instagram-section {
+  padding: 60px 20px 300px;
+  margin-bottom: 0;
+}
+.instagram-section h2 {
+  color: #a76464;
+  font-size: 40px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.insta-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background-color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 10px #fff;
+  display: block;
+}
+.contact-section {
+  background-color: #f3d4d6;
+  text-align: center;
+  font-family: "Shippori Mincho", serif;
+  padding-top: 80px;
+}
+.contact-section p {
+  text-align: left;
+  font-size: 20px;
+  padding-left: 20px;
+  color: #6e4a4a;
+  margin: 55px 0;
+}
+.icon-img {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.card-icons img {
+  width: 80px;
+  margin: 0 30px;
+}
+.card-icons {
+  margin-top: 20px;
+}
+.copyright {
+  font-size: 7px;
+  color: #6e4a4a;
+  margin-top: 50px;
+}
